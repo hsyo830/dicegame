@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <h1>주사위 게임</h1>
-      <Dice />
+      <Dice color="red" num={2} />
     </div>
   );
 }
