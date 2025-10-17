@@ -29,8 +29,12 @@ function App() {
     <div>
       <h1>주사위 게임</h1>
       <div>
-        <Button onClick={handleRollClick}>던지기</Button>
-        <Button onClick={handleClearClick}>처음부터</Button>
+        <Button color="purple" onClick={handleRollClick}>
+          던지기
+        </Button>
+        <Button color="navy" onClick={handleClearClick}>
+          처음부터
+        </Button>
       </div>
       <div>
         <Board
