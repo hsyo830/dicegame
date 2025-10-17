@@ -31,7 +31,11 @@ function App() {
     <div>
       <h1 className={styles.title}>주사위 게임</h1>
       <div>
-        <Button color="purple" onClick={handleRollClick}>
+        <Button
+          className={styles.button}
+          color="purple"
+          onClick={handleRollClick}
+        >
           던지기
         </Button>
         <Button color="navy" onClick={handleClearClick}>
