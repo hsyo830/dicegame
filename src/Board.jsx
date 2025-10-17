@@ -1,4 +1,5 @@
 import Dice from "./Dice";
+import styles from "./Board.module.css";
 
 function Board({ name, color, gameHistory, isLoser }) {
   const num = gameHistory[gameHistory.length - 1] || 1;
@@ -9,7 +10,7 @@ function Board({ name, color, gameHistory, isLoser }) {
   }
   return (
     <div>
-      <h2>{name}</h2>
+      <h2 className={styles.title}>{name}</h2>
       <Dice color={color} num={num} />
       <div>총점: {sum}</div>
       <div>기록: {gameHistory.join(", ")}</div>

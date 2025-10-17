@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Button from "./Button";
 import Board from "./Board";
+import styles from "./App.module.css";
+import "./index.css";
 
 function random(n) {
   return Math.ceil(Math.random() * n);
@@ -27,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <h1>주사위 게임</h1>
+      <h1 className={styles.title}>주사위 게임</h1>
       <div>
         <Button color="purple" onClick={handleRollClick}>
           던지기
