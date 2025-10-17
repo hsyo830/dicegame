@@ -48,6 +48,7 @@ function App() {
           num={num}
           sum={sum}
           gameHistory={gameHistory}
+          isLoser={num < otherNum}
         />
         <Board
           name="상대"
@@ -55,6 +56,7 @@ function App() {
           num={otherNum}
           sum={otherSum}
           gameHistory={OtherGameHistory}
+          isLoser={otherNum < num}
         />
       </div>
     </div>
