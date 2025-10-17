@@ -8,31 +8,22 @@ function random(n) {
 
 function App() {
   // 주사위 게임 로직 구현
-  const [num, setNum] = useState(1);
-  const [sum, setSum] = useState(0);
-  const [gameHistory, setGameHistory] = useState([]);
-  const [otherNum, setOtherNum] = useState(1);
-  const [otherSum, setOtherSum] = useState(0);
-  const [OtherGameHistory, setOtherGameHistory] = useState([]);
+  const [myHistory, setMyHistory] = useState([]);
+  const [OtherHistory, setOtherHistory] = useState([]);
 
   const handleRollClick = () => {
-    const nextNum = random(6);
+    const nextMyNum = random(6);
     const nextOtherNum = random(6);
-    setNum(nextNum);
-    setSum(sum + nextNum);
-    setGameHistory([...gameHistory, nextNum]);
-    setOtherNum(nextOtherNum);
-    setOtherSum(otherSum + nextOtherNum);
-    setOtherGameHistory([...OtherGameHistory, nextOtherNum]);
+    setMyHistory([...myHistory, nextMyNum]);
+    setOtherHistory([...OtherHistory, nextOtherNum]);
   };
   const handleClearClick = () => {
-    setNum(1);
-    setSum(0);
-    setGameHistory([]);
-    setOtherNum(1);
-    setOtherSum(0);
-    setOtherGameHistory([]);
+    setMyHistory([]);
+    setOtherHistory([]);
   };
+
+  const myNum = myHistory[myHistory.length - 1] || 1;
+  const otherNum = OtherHistory[OtherHistory.length - 1] || 1;
 
   return (
     <div>
@@ -45,18 +36,14 @@ function App() {
         <Board
           name="나"
           color="purple"
-          num={num}
-          sum={sum}
-          gameHistory={gameHistory}
-          isLoser={num < otherNum}
+          gameHistory={myHistory}
+          isLoser={myNum < otherNum}
         />
         <Board
           name="상대"
           color="red"
-          num={otherNum}
-          sum={otherSum}
-          gameHistory={OtherGameHistory}
-          isLoser={otherNum < num}
+          gameHistory={OtherHistory}
+          isLoser={otherNum < myNum}
         />
       </div>
     </div>
