@@ -1,7 +1,46 @@
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  width: 575px;
+  height: 240px;
+  padding: 55px 0;
+  background-color: #1b2029;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
 .title {
   font-size: 40px;
+  line-height: 1;
 }
-
-.button {
-  margin-right: 8px;
+.divider {
+  border: 1px solid #272d3a;
+  width: 575px;
+  margin: 40px 0;
+}
+.boardContainer {
+  width: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+.boards {
+  margin: 24px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }

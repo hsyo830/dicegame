@@ -1,3 +1,49 @@
+.board {
+  width: 282px;
+  height: 332px;
+  padding: 16px;
+  background-color: #272d3a;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.diceContainer {
+  width: 250px;
+  height: 172px;
+  border-radius: 16px;
+  background-color: #1d222c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .title {
+  margin: 32px 0 24px 0;
   font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.totalScore {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+.score {
+  font-weight: 700;
+  font-size: 32px;
+}
+.gameHistory {
+  width: 250px;
+  min-height: 51px;
+  padding: 16px;
+  background-color: #323949;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-y: auto;
 }

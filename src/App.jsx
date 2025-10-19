@@ -28,9 +28,9 @@ function App() {
   const otherNum = OtherHistory[OtherHistory.length - 1] || 1;
 
   return (
-    <div>
-      <h1 className={styles.title}>주사위 게임</h1>
-      <div>
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <h1 className={styles.title}>주사위 게임</h1>
         <Button
           className={styles.button}
           color="purple"
@@ -38,23 +38,29 @@ function App() {
         >
           던지기
         </Button>
-        <Button color="navy" onClick={handleClearClick}>
-          처음부터
-        </Button>
       </div>
-      <div>
-        <Board
-          name="나"
-          color="purple"
-          gameHistory={myHistory}
-          isLoser={myNum < otherNum}
-        />
-        <Board
-          name="상대"
-          color="red"
-          gameHistory={OtherHistory}
-          isLoser={otherNum < myNum}
-        />
+      <hr className={styles.divider} />
+      <div className={styles.boardContainer}>
+        <h2 className={styles.subtitle}>경기 결과</h2>
+        <div className={styles.boards}>
+          <Board
+            name="나"
+            color="purple"
+            gameHistory={myHistory}
+            isLoser={myNum < otherNum}
+          />
+          <Board
+            name="상대"
+            color="red"
+            gameHistory={OtherHistory}
+            isLoser={otherNum < myNum}
+          />
+        </div>
+        <div className={styles.resetButton}>
+          <Button color="navy" onClick={handleClearClick}>
+            처음부터
+          </Button>
+        </div>
       </div>
     </div>
   );

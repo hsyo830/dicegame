@@ -9,11 +9,15 @@ function Board({ name, color, gameHistory, isLoser }) {
     console.log(name);
   }
   return (
-    <div>
-      <h2 className={styles.title}>{name}</h2>
-      <Dice color={color} num={num} />
-      <div>총점: {sum}</div>
-      <div>기록: {gameHistory.join(", ")}</div>
+    <div className={styles.board}>
+      <div className={styles.diceContainer}>
+        <h2 className={styles.title}>{name}</h2>
+        <Dice color={color} num={num} />
+      </div>
+      <div className={styles.totalScore}>
+        <span className={styles.score}>{sum}</span>점
+      </div>
+      <div className={styles.gameHistory}>{gameHistory.join(", ")}</div>
     </div>
   );
 }
