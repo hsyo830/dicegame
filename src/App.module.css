@@ -1,13 +1,15 @@
 .main {
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
 }
 .header {
   width: 575px;
   height: 240px;
+  margin: 80px;
   padding: 55px 0;
   background-color: #1b2029;
   border-radius: 32px;

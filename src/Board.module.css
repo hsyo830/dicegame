@@ -47,3 +47,6 @@
   white-space: normal;
   overflow-y: auto;
 }
+.loser {
+  opacity: 0.5;
+}
